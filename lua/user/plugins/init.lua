@@ -27,6 +27,8 @@ require('lazy').setup({
   require("user.plugins.themes"),
   require("user.plugins.toggleterm"),
   require("user.plugins.comment"),
+  require("user.plugins.neotree"),
+  require("user.plugins.bufferline"),
 
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',

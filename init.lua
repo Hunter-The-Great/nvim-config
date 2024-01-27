@@ -1,4 +1,3 @@
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
@@ -67,6 +66,10 @@ vim.o.termguicolors = true
 -- [[ Basic Keymaps ]]
 vim.keymap.set("n", "<leader>.", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>sc", "<cmd>Telescope colorscheme<CR>")
+vim.keymap.set("n", "<c-.>", "<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n", "<c-,>", "<cmd>BufferLineCyclePrev<CR>")
+
+
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>y", '"+y', opts)
 vim.keymap.set("v", "<leader>y", '"+y', opts)
@@ -81,8 +84,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>lp', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>lq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
