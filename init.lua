@@ -1,6 +1,3 @@
-require("user.plugins")
-
-vim.cmd.colorscheme 'tokyonight-night'
 
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -13,6 +10,11 @@ Keymapper = function(pattern, command, description)
     desc = description,
   })
 end
+
+require("user.plugins")
+
+vim.cmd.colorscheme 'tokyonight-night'
+
 -- [[ Configure plugins ]]
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
