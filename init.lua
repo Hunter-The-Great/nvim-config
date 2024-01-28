@@ -68,6 +68,7 @@ vim.keymap.set("n", "<leader>.", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set("n", "<leader>sc", "<cmd>Telescope colorscheme<CR>")
 vim.keymap.set("n", "<c-.>", "<cmd>BufferLineCycleNext<CR>")
 vim.keymap.set("n", "<c-,>", "<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n", "<c-/>", "<cmd>bdelete<CR>")
 
 
 local opts = { noremap = true, silent = true }
