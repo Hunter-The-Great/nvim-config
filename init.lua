@@ -12,7 +12,7 @@ end
 
 require("user.plugins")
 
-vim.cmd.colorscheme 'tokyonight-night'
+vim.cmd.colorscheme 'cyberdream'
 
 -- [[ Configure plugins ]]
 -- NOTE: Here is where you install your plugins.
