@@ -17,6 +17,8 @@ return {
     },
   },
   config = function()
+    vim.keymap.set("n", "<leader>sc", "<cmd>Telescope colorscheme<CR>")
+
     require('telescope').setup {
       pickers = {
         -- Enable live colorscheme preview

@@ -24,12 +24,12 @@ vim.cmd.colorscheme 'cyberdream'
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 -- Set highlight on search
 vim.o.hlsearch = false
 
--- Make line numbers default
-vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode
@@ -65,11 +65,6 @@ vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
 vim.keymap.set("n", "<leader>.", "<cmd>CellularAutomaton make_it_rain<CR>")
-vim.keymap.set("n", "<leader>sc", "<cmd>Telescope colorscheme<CR>")
-vim.keymap.set("n", "<c-.>", "<cmd>BufferLineCycleNext<CR>")
-vim.keymap.set("n", "<c-,>", "<cmd>BufferLineCyclePrev<CR>")
-vim.keymap.set("n", "<c-/>", "<cmd>bdelete<CR>")
-
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>y", '"+y', opts)
