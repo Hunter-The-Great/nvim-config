@@ -64,7 +64,9 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
-vim.keymap.set("n", "<leader>.", "<cmd>CellularAutomaton make_it_rain<CR>")
+vim.keymap.set("n", "<leader>..", "<cmd>CellularAutomaton make_it_rain<CR>")
+vim.keymap.set("n", "<leader>.,", "<cmd>CellularAutomaton scramble<CR>")
+vim.keymap.set("n", "<leader>.l", "<cmd>CellularAutomaton game_of_life<CR>")
 
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>y", '"+y', opts)

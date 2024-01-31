@@ -20,7 +20,7 @@ return {
 			dashboard.button("f", "  > Find file", ":cd $HOME/Desktop/Code | Telescope find_files<CR>"),
 			dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
 			dashboard.button("u", "  > Update plugins", "<cmd>Lazy sync<CR>"),
-			dashboard.button("s", "  > Settings", ":cd $HOME/.config/nvim | :e $MYVIMRC <CR>"),
+			dashboard.button("c", "  > Configuration", ":cd $HOME/.config/nvim | :e $MYVIMRC <CR>"),
 			dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
 		}
 
