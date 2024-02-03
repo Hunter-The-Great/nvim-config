@@ -38,4 +38,5 @@ require('lazy').setup({
 
   --fun
   'eandrju/cellular-automaton.nvim',
+  'wbthomason/packer.nvim'
 })
