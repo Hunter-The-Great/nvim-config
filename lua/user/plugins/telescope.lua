@@ -20,6 +20,12 @@ return {
     vim.keymap.set("n", "<leader>sc", "<cmd>Telescope colorscheme<CR>")
 
     require('telescope').setup {
+      defaults = {
+        file_ignore_patterns = { "node%_modules/.*" },
+        prompt_prefix = " ",
+        selection_caret = " ",
+        path_display = { "smart" },
+      },
       pickers = {
         -- Enable live colorscheme preview
         colorscheme = {

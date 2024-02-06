@@ -31,6 +31,9 @@ require('lazy').setup({
   require("user.plugins.bufferline"),
   require("user.plugins.alpha"),
   require("user.plugins.navbuddy"),
+  require("user.plugins.todocomments"),
+  require("user.plugins.trouble"),
+  require("user.plugins.quickfix"),
 
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -38,5 +41,4 @@ require('lazy').setup({
 
   --fun
   'eandrju/cellular-automaton.nvim',
-  'wbthomason/packer.nvim'
 })
