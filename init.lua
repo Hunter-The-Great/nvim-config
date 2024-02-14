@@ -30,6 +30,7 @@ vim.opt.tabstop = 2
 -- Set highlight on search
 vim.o.hlsearch = false
 
+vim.wo.number = true
 vim.wo.relativenumber = true
 
 -- Enable mouse mode

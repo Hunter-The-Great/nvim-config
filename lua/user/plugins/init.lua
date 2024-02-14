@@ -34,6 +34,7 @@ require('lazy').setup({
   require("user.plugins.todocomments"),
   require("user.plugins.trouble"),
   require("user.plugins.quickfix"),
+  require("user.plugins.oil"),
 
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
