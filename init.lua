@@ -5,12 +5,12 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 Keymapper = function(pattern, command, description)
-  vim.keymap.set("n", "<leader>" .. pattern, command, {
+  vim.keymap.set('n', '<leader>' .. pattern, command, {
     desc = description,
   })
 end
 
-require("user.plugins")
+require 'user.plugins'
 
 vim.cmd.colorscheme 'cyberdream'
 
@@ -24,8 +24,8 @@ vim.cmd.colorscheme 'cyberdream'
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 
 -- Set highlight on search
 vim.o.hlsearch = false
@@ -65,13 +65,13 @@ vim.o.completeopt = 'menuone,noselect'
 vim.o.termguicolors = true
 
 -- [[ Basic Keymaps ]]
-vim.keymap.set("n", "<leader>..", "<cmd>CellularAutomaton make_it_rain<CR>")
-vim.keymap.set("n", "<leader>.,", "<cmd>CellularAutomaton scramble<CR>")
-vim.keymap.set("n", "<leader>.l", "<cmd>CellularAutomaton game_of_life<CR>")
+vim.keymap.set('n', '<leader>..', '<cmd>CellularAutomaton make_it_rain<CR>')
+vim.keymap.set('n', '<leader>.,', '<cmd>CellularAutomaton scramble<CR>')
+vim.keymap.set('n', '<leader>.l', '<cmd>CellularAutomaton game_of_life<CR>')
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set("n", "<leader>y", '"+y', opts)
-vim.keymap.set("v", "<leader>y", '"+y', opts)
+vim.keymap.set('n', '<leader>y', '"+y', opts)
+vim.keymap.set('v', '<leader>y', '"+y', opts)
 -- Keymaps for better default experience
 -- See `:help vim.keymap.set()`
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
@@ -272,12 +272,12 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
   local keymap = vim.api.nvim_buf_set_keymap
-  keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-  keymap(bufnr, "n", "gT", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
-  keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-  keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
+  keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  keymap(bufnr, 'n', 'gT', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
+  keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  keymap(bufnr, 'n', 'gI', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
 
   nmap('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
   nmap('<leader>D', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
@@ -285,9 +285,6 @@ local on_attach = function(_, bufnr)
   nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
 
   -- See `:help K` for why this keymap
-  nmap('<leader>ff', function()
-    vim.lsp.buf.format()
-  end, 'Format page')
   nmap('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
   -- Lesser used LSP functionality
