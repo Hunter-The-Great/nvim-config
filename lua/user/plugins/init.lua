@@ -36,6 +36,8 @@ require('lazy').setup {
   require 'user.plugins.quickfix',
   require 'user.plugins.oil',
   require 'user.plugins.conform',
+  require 'user.plugins.tsc',
+  require 'user.plugins.ts-error-translator',
 
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
