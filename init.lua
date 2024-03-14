@@ -12,7 +12,7 @@ end
 
 require 'user.plugins'
 
-vim.cmd.colorscheme 'cyberdream'
+vim.cmd.colorscheme 'material-palenight'
 
 vim.cmd 'highlight! HarpoonInactive guibg=NONE guifg=#63698c'
 vim.cmd 'highlight! HarpoonActive guibg=NONE guifg=white'
