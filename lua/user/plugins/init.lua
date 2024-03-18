@@ -39,7 +39,9 @@ require('lazy').setup {
   require 'user.plugins.conform',
   require 'user.plugins.tsc',
   require 'user.plugins.ts-error-translator',
+  require 'user.plugins.glow',
 
+  'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
   'tpope/vim-sleuth',

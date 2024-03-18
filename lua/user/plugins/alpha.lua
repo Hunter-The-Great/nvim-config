@@ -8,7 +8,7 @@ return {
     --local fortune = require("alpha.fortune")
     math.randomseed(os.time())
     local function pick_color()
-      local colors = { 'String', 'Constant', 'Function', 'Operator', 'ErrorMsg', 'DiffChange', 'Question', 'Conditional' }
+      local colors = { 'String', 'Constant', 'Function', 'Operator', 'type', 'ErrorMsg', 'Question', 'Conditional' }
       return colors[math.random(#colors)]
     end
     local function pick_header()
