@@ -40,6 +40,7 @@ require('lazy').setup {
   require 'user.plugins.tsc',
   require 'user.plugins.ts-error-translator',
   require 'user.plugins.glow',
+  require 'user.plugins.scissors',
 
   'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
