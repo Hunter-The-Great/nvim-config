@@ -41,6 +41,7 @@ require('lazy').setup {
   require 'user.plugins.ts-error-translator',
   require 'user.plugins.glow',
   require 'user.plugins.scissors',
+  require 'user.plugins.supermaven',
 
   'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
