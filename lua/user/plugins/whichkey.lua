@@ -55,5 +55,7 @@ return {
       ['<leader>'] = { name = 'VISUAL <leader>' },
       ['<leader>h'] = { 'Git [H]unk' },
     }, { mode = 'v' })
+
+    require('which-key').setup { notify = false }
   end,
 }
