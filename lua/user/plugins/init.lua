@@ -43,6 +43,8 @@ require('lazy').setup {
   require 'user.plugins.scissors',
   require 'user.plugins.supermaven',
   require 'user.plugins.avante',
+  require 'user.plugins.fzf-lua',
+  require 'user.plugins.ghostty',
 
   'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
