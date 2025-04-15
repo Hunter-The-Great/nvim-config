@@ -152,18 +152,20 @@ return {
               section = 'terminal',
               enabled = in_git,
               padding = 1,
-              ttl = 5 * 60,
+              ttl = 60,
               indent = 3,
             }, cmd)
           end, cmds)
         end,
-        { title = '' },
-        { title = 'Harpoon', padding = 1 },
         {
+          title = 'Harpoon',
+          icon = '⊙ ',
           section = 'terminal',
           cmd = "jq -r --arg proj \"$PWD\" '.projects[$proj].mark.marks[]?.filename' ~/.local/share/nvim/harpoon.json | nl -w1 -s': '",
           height = 17,
           padding = 1,
+          indent = 3,
+          ttl = 60,
         },
         { section = 'startup' },
       },
