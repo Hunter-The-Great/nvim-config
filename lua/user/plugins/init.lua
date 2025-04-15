@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup {
-  require 'user.plugins.copilot',
+  --require 'user.plugins.copilot',
   require 'user.plugins.autopair',
   --require("user.plugins.autoformat"),
   require 'user.plugins.debug',
@@ -27,15 +27,15 @@ require('lazy').setup {
   require 'user.plugins.themes',
   require 'user.plugins.toggleterm',
   require 'user.plugins.comment',
-  require 'user.plugins.neotree',
+  -- require 'user.plugins.neotree',
   -- require 'user.plugins.bufferline',
   require 'user.plugins.harpoon',
-  require 'user.plugins.alpha',
+  -- require 'user.plugins.alpha',
   require 'user.plugins.navbuddy',
   require 'user.plugins.todocomments',
   require 'user.plugins.trouble',
   require 'user.plugins.quickfix',
-  require 'user.plugins.oil',
+  -- require 'user.plugins.oil',
   require 'user.plugins.conform',
   require 'user.plugins.tsc',
   require 'user.plugins.ts-error-translator',
@@ -45,6 +45,9 @@ require('lazy').setup {
   require 'user.plugins.avante',
   require 'user.plugins.fzf-lua',
   require 'user.plugins.ghostty',
+  require 'user.plugins.yazi',
+  require 'user.plugins.snacks',
+  require 'user.plugins.yanky',
 
   'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
