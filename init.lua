@@ -30,8 +30,9 @@ vim.cmd 'highlight! TabLineFill guibg=NONE guifg=white'
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.expandtab = true -- convert tabs to spaces
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 -- Set highlight on search
 vim.o.hlsearch = false
