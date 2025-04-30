@@ -19,7 +19,8 @@ return {
     'zbirenbaum/copilot.lua', -- for providers='copilot'
     {
       -- support for image pasting
-      'HakonHarnes/img-clip.nvim',
+
+      --[[ 'HakonHarnes/img-clip.nvim',
       event = 'VeryLazy',
       opts = {
         -- recommended settings
@@ -32,7 +33,7 @@ return {
           -- required for Windows users
           use_absolute_path = true,
         },
-      },
+      }, ]]
     },
     {
       -- Make sure to set this up properly if you have lazy=true

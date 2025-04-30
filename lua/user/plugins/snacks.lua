@@ -121,7 +121,7 @@ return {
             },
             {
               title = 'Open Issues',
-              cmd = 'gh issue list -L 3',
+              cmd = 'gh issue list -L 3 || true',
               key = 'i',
               action = function()
                 vim.fn.jobstart('gh issue list --web', { detach = true })
@@ -132,7 +132,7 @@ return {
             {
               icon = ' ',
               title = 'Open PRs',
-              cmd = 'gh pr list -L 3',
+              cmd = 'gh pr list -L 3 || true',
               key = 'P',
               action = function()
                 vim.fn.jobstart('gh pr list --web', { detach = true })
@@ -161,7 +161,7 @@ return {
           title = 'Harpoon',
           icon = '⊙ ',
           section = 'terminal',
-          cmd = "jq -r --arg proj \"$PWD\" '.projects[$proj].mark.marks[]?.filename' ~/.local/share/nvim/harpoon.json | nl -w1 -s': '",
+          cmd = "jq -r --arg proj \"$PWD\" '.projects[$proj].mark.marks[]?.filename' ~/.local/share/nvim/harpoon.json | nl -w1 -s': ' || true",
           height = 17,
           padding = 1,
           indent = 3,

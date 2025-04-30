@@ -48,6 +48,7 @@ require('lazy').setup {
   require 'user.plugins.yazi',
   require 'user.plugins.snacks',
   require 'user.plugins.yanky',
+  -- require 'user.plugins.copilotlsp',
 
   'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
