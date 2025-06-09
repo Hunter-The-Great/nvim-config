@@ -22,6 +22,10 @@ local function pick_header()
 ██║     ██╔══██║ ███╔╝    ╚██╔╝   z         
 ███████╗██║  ██║███████╗   ██║              
 ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝              ]],
+    [[
+█▄▄ █▀▀ █▄ █ █     █▀▀ █▄ █ ▀█▀ █▀▀ █▀█ █▀█ █▀█ █ █▀▀ █▀▀ █▀▀
+█▄█ ██▄ █ ▀█ █▄▄   ██▄ █ ▀█  █  ██▄ █▀▄ █▀▀ █▀▄ █ ▄▄█ ██▄ ▄▄█
+    ]],
   }
   return headers[math.random(#headers)]
 end
@@ -96,6 +100,20 @@ return {
         { section = 'header' },
         { section = 'keys', gap = 1, padding = 1 },
         {
+          title = 'Harpoon',
+          icon = '⊙ ',
+          section = 'terminal',
+          cmd = "jq -r --arg proj \"$PWD\" '.projects[$proj].mark.marks[]?.filename' ~/.local/share/nvim/harpoon.json | nl -w1 -s': ' || true",
+          height = 4,
+          indent = 3,
+          ttl = 60,
+        },
+        {
+          section = 'terminal',
+          cmd = 'tuime -g "#ffe" -g "#3af"',
+        },
+
+        {
           pane = 2,
           icon = ' ',
           desc = 'Browse Repo',
@@ -127,7 +145,7 @@ return {
                 vim.fn.jobstart('gh issue list --web', { detach = true })
               end,
               icon = ' ',
-              height = 7,
+              height = 8,
             },
             {
               icon = ' ',
@@ -157,16 +175,6 @@ return {
             }, cmd)
           end, cmds)
         end,
-        {
-          title = 'Harpoon',
-          icon = '⊙ ',
-          section = 'terminal',
-          cmd = "jq -r --arg proj \"$PWD\" '.projects[$proj].mark.marks[]?.filename' ~/.local/share/nvim/harpoon.json | nl -w1 -s': ' || true",
-          height = 17,
-          padding = 1,
-          indent = 3,
-          ttl = 60,
-        },
         { section = 'startup' },
       },
     },
