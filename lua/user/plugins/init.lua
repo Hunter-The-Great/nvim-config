@@ -38,7 +38,7 @@ require('lazy').setup {
   -- require 'user.plugins.oil',
   require 'user.plugins.conform',
   require 'user.plugins.tsc',
-  require 'user.plugins.ts-error-translator',
+  -- require 'user.plugins.ts-error-translator',
   require 'user.plugins.glow',
   require 'user.plugins.scissors',
   require 'user.plugins.supermaven',
@@ -49,6 +49,7 @@ require('lazy').setup {
   require 'user.plugins.snacks',
   require 'user.plugins.yanky',
   -- require 'user.plugins.copilotlsp',
+  require 'user.plugins.nvim-highlight-colors',
 
   'mfussenegger/nvim-jdtls',
   'tpope/vim-fugitive',
